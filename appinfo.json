@@ -1,0 +1,134 @@
+{
+    "appKeys": {},
+    "capabilities": [
+        ""
+    ],
+    "companyName": "chops",
+    "longName": "Day Night Timezones",
+    "projectType": "native",
+    "resources": {
+        "media": [
+            {
+                "file": "images/dnz-batt-chg.png",
+                "name": "IMAGE_BATT_CHARGING",
+                "type": "png"
+            },
+            {
+                "file": "images/dnz-batt-10.png",
+                "name": "IMAGE_BATT_10",
+                "type": "png"
+            },
+            {
+                "file": "images/dnz-batt-20.png",
+                "name": "IMAGE_BATT_20",
+                "type": "png"
+            },
+            {
+                "file": "images/dnz-batt-30.png",
+                "name": "IMAGE_BATT_30",
+                "type": "png"
+            },
+            {
+                "file": "images/dnz-batt-40.png",
+                "name": "IMAGE_BATT_40",
+                "type": "png"
+            },
+            {
+                "file": "images/dnz-batt-50.png",
+                "name": "IMAGE_BATT_50",
+                "type": "png"
+            },
+            {
+                "file": "images/dnz-batt-60.png",
+                "name": "IMAGE_BATT_60",
+                "type": "png"
+            },
+            {
+                "file": "images/dnz-batt-70.png",
+                "name": "IMAGE_BATT_70",
+                "type": "png"
+            },
+            {
+                "file": "images/dnz-batt-80.png",
+                "name": "IMAGE_BATT_80",
+                "type": "png"
+            },
+            {
+                "file": "images/dnz-batt-90.png",
+                "name": "IMAGE_BATT_90",
+                "type": "png"
+            },
+            {
+                "file": "images/dnz-batt-100.png",
+                "name": "IMAGE_BATT_100",
+                "type": "png"
+            },
+            {
+                "file": "fonts/LECO_1976-Regular.ttf",
+                "name": "FONT_LECO_14",
+                "type": "font"
+            },
+            {
+                "file": "images/bg2.png",
+                "name": "IMAGE_BG2",
+                "type": "png"
+            },
+            {
+                "file": "images/NIGHT_PBLv2.png",
+                "name": "NIGHT_PBLv2",
+                "type": "png"
+            },
+            {
+                "file": "images/worldCLR.png",
+                "name": "SIMPLE_DAY",
+                "type": "png"
+            },
+            {
+                "file": "images/NIGHT_PBL.png",
+                "name": "NIGHT_PBL",
+                "type": "png"
+            },
+            {
+                "file": "images/DAY_PBL.png",
+                "name": "DAY_PBL",
+                "type": "png"
+            },
+            {
+                "file": "images/world.png",
+                "name": "WORLD",
+                "type": "png"
+            },
+            {
+                "file": "images/preview_earth_daymap.png",
+                "name": "DAY_PBL_V5",
+                "type": "png"
+            },
+            {
+                "file": "images/earthlights_dmsp.png",
+                "name": "NIGHT_PBLv5",
+                "type": "png"
+            },
+            {
+                "file": "images/preview_earth_daymap (3).png",
+                "name": "DAY_PBL_V6",
+                "type": "png"
+            },
+            {
+                "file": "images/preview_earth_daymap (6) (2).png",
+                "name": "DAY_PBL_V10",
+                "type": "png"
+            }
+        ]
+    },
+    "sdkVersion": "3",
+    "shortName": "Day Night TZ",
+    "targetPlatforms": [
+        "aplite",
+        "basalt"
+    ],
+    "uuid": "9b0ee598-e9f5-4b4f-96b1-55325ad179a0",
+    "versionLabel": "1.0",
+    "watchapp": {
+        "watchface": true
+    }
+}
