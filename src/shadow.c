@@ -18,7 +18,8 @@ static TextLayer *s_battery_layer;
 
 static GBitmap *background_image;
 static BitmapLayer *background_layer;
-static GFont *custom_font;
+static GFont custom_font;
+static GFont custom_font2;
 
 GBitmap *img_battery_100;
 GBitmap *img_battery_90;
@@ -239,9 +240,9 @@ static void handle_minute_tick(struct tm *tick_time, TimeUnits units_changed) {
   strftime(date_text, sizeof(date_text), "%a, %b %e", tick_time);
   text_layer_set_text(date_text_layer, date_text);
 
-	//new york START//
+  //new york START
   NY_time = tick_time;
-  NY_time->tm_hour += 10;
+  NY_time->tm_hour += 10;  // might need to adjust values
   if (NY_time->tm_hour > 23) {
    NY_time->tm_hour -= 24;
   }  
@@ -255,9 +256,9 @@ static void handle_minute_tick(struct tm *tick_time, TimeUnits units_changed) {
   text_layer_set_text(time_NY_text_layer, time_NY_text);  //Just added  
   //new york END//
   
-  //JAPAN START//
+  //JAPAN START
   JPN_time = tick_time;
-  JPN_time->tm_hour += 13;
+  JPN_time->tm_hour += 13;  // might need to adjust values
   if (JPN_time->tm_hour > 23) {
    JPN_time->tm_hour -= 24;
   }  
@@ -268,9 +269,9 @@ static void handle_minute_tick(struct tm *tick_time, TimeUnits units_changed) {
   text_layer_set_text(time_JPN_text_layer, time_JPN_text);  //Just added
   //JAPAN END//  
  
-	  //GMT START//
+  //GMT START
   GMT_time = tick_time;
-  GMT_time->tm_hour += 15;
+  GMT_time->tm_hour += 15;  // might need to adjust values
   if (GMT_time->tm_hour > 23) {
    GMT_time->tm_hour -= 24;
   }  
@@ -313,6 +314,7 @@ static void window_load(Window *window) {
   Layer *window_layer = window_get_root_layer(window);
 
   custom_font = fonts_load_custom_font(resource_get_handle(RESOURCE_ID_FONT_LECO_14));
+  custom_font2 = fonts_load_custom_font(resource_get_handle(RESOURCE_ID_FONT_LECO_32));
 	
 #ifdef BLACK_ON_WHITE
   window_set_background_color(window, GColorWhite);
@@ -350,7 +352,7 @@ static void window_load(Window *window) {
   text_layer_set_text_color(time_text_layer, GColorBlack);
 #endif
   #ifdef PBL_PLATFORM_APLITE
-    text_layer_set_font(time_text_layer, fonts_get_system_font(FONT_KEY_BITHAM_34_MEDIUM_NUMBERS));//FONT_KEY_BITHAM_34_MEDIUM_NUMBERS
+    text_layer_set_font(time_text_layer, custom_font2);//FONT_KEY_BITHAM_34_MEDIUM_NUMBERS
   #else
     text_layer_set_font(time_text_layer, fonts_get_system_font(FONT_KEY_LECO_32_BOLD_NUMBERS  ));//FONT_KEY_BITHAM_34_MEDIUM_NUMBERS));//FONT_KEY_BITHAM_34_MEDIUM_NUMBERS
   #endif  
@@ -509,6 +511,7 @@ static void window_unload(Window *window) {
   text_layer_destroy(date_text_layer);
   text_layer_destroy(s_battery_layer);
   fonts_unload_custom_font(custom_font);
+  fonts_unload_custom_font(custom_font2);
   battery_state_service_unsubscribe();
   tick_timer_service_unsubscribe();
   layer_destroy(canvas);

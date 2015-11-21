@@ -64,6 +64,12 @@
                 "type": "png"
             },
             {
+                "characterRegex": "[0-9:]",
+                "file": "fonts/LECO_1976-Regular.ttf",
+                "name": "FONT_LECO_32",
+                "type": "font"
+            },
+            {
                 "file": "fonts/LECO_1976-Regular.ttf",
                 "name": "FONT_LECO_14",
                 "type": "font"
